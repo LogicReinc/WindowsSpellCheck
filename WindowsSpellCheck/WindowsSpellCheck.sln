@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsSpellCheck", "WindowsSpellCheck\WindowsSpellCheck.csproj", "{F927E228-EF80-4671-B28E-5850874AF5AC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpellCheckNative", "SpellCheckNative\SpellCheckNative.vcxproj", "{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsSpellCheck.Tests", "WindowsSpellCheck.Tests\WindowsSpellCheck.Tests.csproj", "{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Debug|x64.Build.0 = Debug|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Debug|x86.Build.0 = Debug|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Release|x64.ActiveCfg = Release|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Release|x64.Build.0 = Release|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Release|x86.ActiveCfg = Release|Any CPU
+		{F927E228-EF80-4671-B28E-5850874AF5AC}.Release|x86.Build.0 = Release|Any CPU
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Debug|x64.ActiveCfg = Debug|x64
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Debug|x64.Build.0 = Debug|x64
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Debug|x86.ActiveCfg = Debug|Win32
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Debug|x86.Build.0 = Debug|Win32
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Release|Any CPU.ActiveCfg = Release|Win32
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Release|x64.ActiveCfg = Release|x64
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Release|x64.Build.0 = Release|x64
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Release|x86.ActiveCfg = Release|Win32
+		{989B6321-7FA4-4FFD-B8AC-7EE1B30F0C00}.Release|x86.Build.0 = Release|Win32
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Debug|x64.Build.0 = Debug|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Debug|x86.Build.0 = Debug|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Release|x64.ActiveCfg = Release|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Release|x64.Build.0 = Release|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Release|x86.ActiveCfg = Release|Any CPU
+		{7FFB9E2C-FD9B-4314-AC56-D096B0B90C91}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
