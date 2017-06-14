@@ -40,8 +40,12 @@ namespace WindowsSpellCheck
         {
             Init();
             _factory = CreateSpellCheckerFactory();
+            if (_factory == IntPtr.Zero)
+                throw new Exception("Could not create SpellChecker factory");
             _checker = CreateSpellChecker(_factory, language);
-           
+            if (_factory == IntPtr.Zero)
+                throw new Exception("Could not create SpellChecker");
+
         }
 
         public void Dispose()
