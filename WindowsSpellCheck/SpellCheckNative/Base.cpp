@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_DEPRECATE
 #include "Base.h"
 
 
@@ -9,9 +8,7 @@ HRESULT CreateSpellCheckerFactory(ISpellCheckerFactory** spellCheckerFactory)
 {
 	HRESULT hr = CoCreateInstance(__uuidof(SpellCheckerFactory), nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(spellCheckerFactory));
 	if (FAILED(hr))
-	{
 		*spellCheckerFactory = nullptr;
-	}
 	return hr;
 }
 
@@ -22,25 +19,15 @@ HRESULT CreateSpellChecker(ISpellCheckerFactory* spellCheckFactory, PCWSTR langu
 	if (SUCCEEDED(hr))
 	{
 		if (FALSE == isSupported)
-		{
-			wprintf(L"Language tag %s is not supported.\n", languageTag);
-		}
+			throw std::invalid_argument("This language is not supported on this pc");
 		else
-		{
 			hr = spellCheckFactory->CreateSpellChecker(languageTag, spellChecker);
-		}
 	}
 	return hr;
 }
 
 extern "C" __declspec(dllexport) void Init() {
-	HRESULT hr = S_OK;
-	if (SUCCEEDED(hr))
-	{
-		hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
-	}
-
-	bool WasCOMInitialized = SUCCEEDED(hr);
+	CoInitializeEx(nullptr, COINIT_MULTITHREADED);
 }
 
 extern "C" __declspec(dllexport) ISpellCheckerFactory* CreateSpellCheckerFactory()
@@ -60,7 +47,6 @@ extern "C" __declspec(dllexport) ISpellChecker* CreateSpellChecker(ISpellChecker
 	HRESULT result = CreateSpellChecker(factory, language, &checker);
 	if (SUCCEEDED(result))
 		return checker;
-	printf("Failed to create SpellChecker");
 	return nullptr;
 }
 
