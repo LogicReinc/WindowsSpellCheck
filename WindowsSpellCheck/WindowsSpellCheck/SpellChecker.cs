@@ -57,13 +57,13 @@ namespace WindowsSpellCheck
         {
             List<SpellError> errors = new List<SpellError>();
 
-            IntPtr dest = Marshal.AllocHGlobal(Marshal.SizeOf<SpellError>() * 50);
+            IntPtr dest = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(SpellError)) * 50);
 
             uint count = CheckSpelling(_checker, text, dest);
 
             for(int i = 0; i < count; i++)
             {
-                SpellError error = Marshal.PtrToStructure<SpellError>(dest + i * Marshal.SizeOf<SpellError>());
+                SpellError error = (SpellError)Marshal.PtrToStructure(dest + i * Marshal.SizeOf(typeof(SpellError)), typeof(SpellError));
                 errors.Add(error);
             }
 
